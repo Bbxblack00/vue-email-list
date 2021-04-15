@@ -15,16 +15,19 @@ function mailGenerator() {
             console.log('error');
         }
     });
+  }
 
     function generateMail(string) {
 
       const target = $('#list');
 
-      target.append('<ul>' + string + '</ul>')
+      target.append('<ul>' + string + '</ul>');
 
     };
 
 function init() {
-   mailGenerator();
+   for (var i = 0; i < 10; i++) {
+     mailGenerator();
+   }
 }
 document.addEventListener('DOMContentLoaded', init);
